@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+
+
+        let arrowFun = (c,d) => c * d
+        
+        console.log(arrowFun(4,5));
+
+        // a=20, b=25 is param [ Arrow Function init ]
+        let arrowFunction = (a, b) => {
+            let data = {
+                total: a * b,
+                tota: a * b,
+                totl: a * b,
+            }
+
+            return data  
+            
+        }
+
+        // Invoke Function and pass param a=20, b=25
+        let total = arrowFunction(20, 25)
+        console.log(total, 'Arrow Function');
+
+        // Normal Function
+        function test(a, b, c, d, e, f) {
+            return a * b * c * d
+        }
+
+        // Invoke Function
+        let result = test(7, 10, 23, 5)
+        console.log(result, 'Return Type Function');
+
+
+
+        function fullName(first_name, last_name) {
+            let userName = `Hey ! ${first_name} ${last_name} How Are You?`
+            return userName
+        }
+
+        let userName = fullName("Riya", "Parmar")
+        console.log(userName);
+
+
+
+
+    </script>
+</body>
+
+</html>
