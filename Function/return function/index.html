@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <script>
+
+
+        // initialize function
+        function myInfo() {
+            let user = {
+
+                name: "riya parmar",
+                age: "18",
+                mobile: "9946424131",
+
+            }
+
+            let schoolInfo = {
+                school_name: "gnandeep"
+            }
+            return { user, ...schoolInfo }
+
+        }
+
+        // invoke function
+        let result = myInfo();
+        console.log(result, 'result');
+
+        let product = 'gnandeep'
+        console.log(product);
+
+    </script>
+</body>
+
+</html>
