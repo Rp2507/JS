@@ -1,0 +1,362 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+</body>
+
+
+<script>
+
+    // Arrow Function 
+
+    // 1
+
+    var myfun = () => "HELLO !! JAVASCRIPT";
+    console.log(myfun());
+
+    // 2
+    var myfun = () => "This is arrow Function";
+    console.log(myfun());
+
+    // 3 
+    var myFunction = (a, b) => a * b;
+    console.log(myFunction(20, 25));
+
+    // 4
+    var myFunction = (a, b) => a + b;
+    console.log(myFunction(52, 86));
+
+    // 5
+    var myFunction = (a, b) => a / b;
+    console.log(myFunction(20, 100));
+
+    // 6
+    var myFunction = (a, b) => a - b;
+    console.log(myFunction(45, 55));
+
+    // 7
+    var myFunction = (a, b, c, d, e) => a - b * d / c + e;
+    console.log(myFunction(56, 68, 100, 55, 68));
+
+    // 8
+    var myFunction = () => Math.PI;
+    console.log(myFunction());
+
+    // 9
+    var myFunction = (x) => x * x * x;
+    console.log(myFunction(26));
+
+    // 10
+    var factorial = (n) => n < 2 ? 1 : n * factorial(n - 1);
+    console.log(factorial(17));
+
+    // 11
+    var square = (number) => number * number;
+    console.log(square(56));
+
+    // 12
+    var circle = (a) => 3.14 * a * a;
+    console.log(circle(64));
+
+    // 13
+    var toCelsius = (f) => (5 / 9) * (f - 32);
+    console.log(toCelsius(44));
+
+    // 14
+    var calculation = (a, b, c, d, e) => d + e - b * a / c;
+    console.log(calculation(52, 86, 64, 25, 30));
+
+    // 15
+    var test = (x, y, z) => x / y % z;
+    console.log(45, 50, 100);
+
+    // Multiline arrow function
+
+    // 1.========
+
+    var arrow = () => {
+        var fun = "MUltiline Arrow Function";
+        return fun;
+    }
+
+    console.log(arrow());
+
+    // 2.
+
+    var arrowFun = (a, b) => {
+        var data = {
+            total: a * b,
+            tota: a * b,
+            totl: a * b,
+            toal: a * b,
+            ta: a * b,
+            to: a * b
+        }
+
+        return data;
+    }
+
+    var total = arrowFun(10, 20);
+    console.log(total);
+
+    // 3
+
+    var arrowFun = (a, b) => {
+        var data = {
+            total: a * b,
+            tota: a * b,
+            totl: a * b,
+            toal: a * b,
+            ta: a * b,
+            to: a * b
+        }
+
+        return data.totl;
+    }
+
+    var total = arrowFun(10, 20);
+    console.log(total);
+
+    // 4
+
+    var data = () => {
+        var user = {
+            name: "Riya",
+            age: 18,
+            phone: "+91 1546454545",
+            married: false,
+            aadhard_card: 254692926309,
+        }
+        return user;
+    }
+
+    console.log(data());
+
+    // 5
+
+    var add = (a, b) => {
+        let ans = a + b;
+        return ans;
+    }
+
+    console.log(add(56, 86));
+
+    // 6
+
+    var multi = (p1, p2) => {
+        let ans = p1 * p2;
+        return ans;
+    }
+
+    console.log(multi(66, 86));
+
+    // 7
+
+    var bussinessInfo = () => {
+        let info = {
+            name: "xyz infotech",
+            address: "105,royal plaza",
+            area: "varachha",
+            city: "surat"
+        }
+
+        return info;
+    }
+
+    let buss = bussinessInfo();
+    console.log(buss);
+
+    // 8
+
+    var stuInfo = () => {
+        let stu = {
+            name: "malay maheta",
+            age: "15",
+            phone: "+91 145454545",
+            is_married: false,
+            aadhard_card: 254692926309,
+        }
+
+
+        let schoolInfo = {
+            school_name: "red and white"
+        }
+
+        return { stu, ...schoolInfo }
+    }
+
+    let info = stuInfo()
+    console.log(info);
+
+    // 9
+
+    var empDetails = () => {
+        var employee = {
+            name: "chetan raval",
+            age: "30",
+            phone: "265464156451",
+            its_married: false,
+        }
+        var company_Info = {
+            company_name: "Rp infotech"
+        }
+        return { employee, ...company_Info }
+    }
+    var detail = empDetails()
+    console.log(detail, 'detail');
+
+    // 10
+
+    var myFunction = () => {
+        return Math.PI;
+    }
+
+    console.log(myFunction());
+
+    // 11
+
+    var math = (a) => {
+        if (a >= 18) {
+            console.log("You are eligeble for voting")
+        }
+        else {
+            console.log("You are not eligable for voting")
+        }
+
+        return a;
+    }
+
+    var check = math(27);
+    console.log(check);
+
+    // 12
+
+    var multi = (X) => {
+        return X * X
+    }
+
+    console.log(multi(204));
+
+    // 13
+
+    var myCar = () => {
+        let carInfo = {
+            car_name: "Toyota",
+            make: "Honda",
+            model: "Accord",
+            year: 1998,
+        }
+
+        return carInfo;
+    }
+
+    console.log(myCar());
+
+    // 14
+
+    var myCar = () => {
+        let carInfo = {
+            car_name: "Toyota",
+            make: "Honda",
+            model: "Accord",
+            year: 1998,
+        }
+
+        return carInfo.car_name;
+    }
+
+    console.log(myCar());
+
+    // 15.
+
+    var math = (a, b, c, d, e) => {
+        let calculation = d + e - b * a / c;
+
+        return calculation;
+    }
+    let maths = math(20, 56, 100, 56, 10);
+    console.log(maths);
+
+    // 16.
+
+    var course = () => {
+        let it_Course = {
+            course_name: "Full-stack development"
+        }
+
+        return it_Course;
+    }
+
+    console.log(course());
+
+    // 17.
+
+    var getRectArea = (width, height) => {
+        if (width > 0 && height > 0) {
+            return width * height;
+        }
+    }
+
+    console.log(getRectArea(3, 4));
+
+    // 18
+
+    var circle = (a) => {
+        let ans = 3.14 * a * a;
+        return ans;
+
+    }
+    console.log(circle(45));
+
+    // 19.
+    function myFun(p1, p2) {
+
+        let result = {
+            add: p1 + p2,
+            sub: p1 - p2,
+            multi: p1 * p2,
+            div: p1 / p2,
+            mod: p1 % p2
+
+        }
+        return result;
+    }
+
+    var res = myFun(14, 35);
+    console.log(res);
+
+    // 20.
+
+    function my(p1, p2) {
+
+        let result = {
+            add: p1 + p2,
+            sub: p1 - p2,
+            multi: p1 * p2,
+            div: p1 / p2,
+            mod: p1 % p2
+
+        }
+        return result.multi;
+    }
+
+    var answer = my(14, 35);
+    console.log(answer);
+
+
+
+
+
+
+
+
+</script>
+
+</html>
