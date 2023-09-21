@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <script>
+
+        // ============= return function ===========
+
+        // 1.=======
+
+        function myfun() {
+            var x = "Hello!! Javascript....";
+            return x;
+        }
+
+        console.log(myfun());
+
+        // 2.========
+
+        function test() {
+            let user = {
+                name: "Riya",
+                age: 18,
+                phone: "+91 1546454545",
+                married: false,
+                aadhard_card: 254692926309,
+            }
+
+            return user;
+        }
+
+        let result = test();
+        console.log(result);
+
+        // 3.=========
+
+        function add(a, b) {
+            let ans = a + b;
+            return ans;
+        }
+
+        let sum = add(10, 20);
+        console.log(sum)
+
+        // 4.========
+
+        function math(a, b, c, d, e) {
+            let calculation = d + e - b * a / c;
+
+            return calculation;
+        }
+        let maths = math(20, 56, 100, 56, 10);
+        console.log(maths);
+
+        // 5.========
+
+        function myFun(p1, p2) {
+            return p1 * p2;
+        }
+
+        let sub = myFun(4, 3);
+        console.log(sub);
+
+        // 6.========
+
+        function toCelsius(f) {
+            return (5 / 9) * (f - 32);
+        }
+
+        let value = toCelsius(28);
+        console.log(value);
+
+        // 7.=========
+
+        function circle() {
+            let a = 45;
+            let b = 3.14 * a * a;
+            let ans = b;
+
+            return ans;
+
+        }
+        console.log(circle());
+
+        // 8.=========
+
+        function getRectArea(width, height) {
+            if (width > 0 && height > 0) {
+                return width * height;
+            }
+        }
+
+        console.log(getRectArea(3, 4));
+
+        // 9.========
+
+        function div(a, b) {
+            let ans = a / b;
+            return ans;
+        }
+
+        let res = div(100, 250);
+        console.log(sum)
+
+        // 10.=========
+
+        function bussinessInfo() {
+            let info = {
+                name: "xyz infotech",
+                address: "105,royal plaza",
+                area: "varachha",
+                city: "surat"
+            }
+
+            return info;
+        }
+
+        let buss = bussinessInfo();
+        console.log(buss);
+
+        // 11.===========
+
+        function myfunction() {
+            var x = "This is return type function";
+            return x;
+        }
+
+        console.log(myfunction());
+
+        // 12.===========
+
+        function square(number) {
+            return number * number;
+        }
+
+        console.log(square(25));
+
+        // 13.==========
+
+        function myCar() {
+            let carInfo = {
+                car_name: "Toyota",
+                make: "Honda",
+                model: "Accord",
+                year: 1998,
+            }
+
+            return carInfo;
+        }
+
+        console.log(myCar());
+
+        // 14.==========
+
+        function factorial(n){
+            return n < 2 ? 1 : n * factorial(n - 1);
+        }
+
+        console.log(factorial(5));
+
+        // 15.==========
+
+        function cube(y){
+            return y*y*y
+        }
+
+        console.log(cube(48));
+
+        // 16.=========
+
+        function multi(X){
+            return X*X
+        }
+
+        console.log(multi(204));
+
+        // 17.==========
+
+        function math(a) {
+            if (a >= 18) {
+                console.log("You are eligeble for voting")
+            }
+            else {
+                console.log("You are not eligable for voting")
+            }
+
+            return a;
+        }
+
+        var check = math(27);
+        console.log(check);
+
+        // 18.==========
+
+        function stuInfo() {
+            let user = {
+                name: "Abhi Sojitra",
+                age: "23",
+                phone: "+91 9106682536",
+                is_married: false,
+                aadhard_card: 254692926309,
+            }
+            
+            
+            let schoolInfo = {
+                school_name: "test"
+            }
+            
+            return { user, ...schoolInfo}
+        }
+
+        let data = stuInfo()
+        console.log(data);
+
+        // 19.==========
+
+        function empDetails() {
+            var employee = {
+                name: "chetan raval",
+                age: "30",
+                phone: "265464156451",
+                its_married: false,
+            }
+            var company_Info = {
+                company_name: "Rp infotech"
+            }
+            return { employee, ...company_Info }
+        }
+        var detail = empDetails()
+        console.log(detail, 'detail');
+
+        // 20.=========
+
+        function myFunction() {
+  return Math.PI;
+}
+
+console.log(myFunction());
+    </script>
+
+</body>
+
+</html>
