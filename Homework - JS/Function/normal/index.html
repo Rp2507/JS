@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <script>
+
+        // ==================== Normal Function ====================
+
+        // 1.===========
+
+        function myFun() {
+            console.log("normal function");
+        }
+
+        myFun();
+
+        // 2.===========
+
+        function test() {
+            let a = 10;
+            let b = 20;
+
+            console.log(a * b);
+        }
+
+        test();
+
+        // 3.===========
+
+        function info() {
+            let my_name = "Riya";
+            let my_age = 18;
+            let mo_no = 9864662157;
+
+            console.log("My Info :-  " + "My Name : " + my_name + "\n", "My Age : " + my_age + "\n", "Contact No : " + mo_no);
+        }
+
+        info();
+
+        //  4.============
+
+        function sum() {
+            let a = "java"
+            let b = "script"
+            let c = a + b;
+
+            console.log(c);
+        }
+
+        sum();
+
+        // 5.===========
+
+        function data() {
+            let user = {
+                name: "Riya",
+                age: 18,
+                phone: "+91 1546454545",
+                married: false,
+                aadhard_card: 254692926309,
+            }
+
+            console.log(user)
+        }
+
+        data();
+
+        //  6.==========
+
+        function math() {
+            var a = 56;
+
+            if (a >= 18) {
+                console.log("You are eligeble for voting")
+            }
+            else {
+                console.log("You are not eligable for voting")
+            }
+        }
+
+        math();
+
+        //  7.==========
+
+        function circle() {
+            let a = 45;
+            let b = 3.14 * a * a;
+            let ans = b;
+
+            console.log("Area of circle :- " + ans);
+
+        }
+
+        circle();
+
+        //  8.==========
+
+        function myfun() {
+            alert("Hello Javascript");
+        }
+
+        myfun();
+
+        //  9.===========
+
+        function sub() {
+            let a = 7895;
+            let b = 5641;
+            let ans = a - b;
+
+            console.log("a = " + a, "b = " + b, "\na-b = " + ans);
+        }
+
+        sub();
+
+        //  10.==========
+
+        function math(number) {
+            if (number > 0) {
+                console.log("number is positive");
+            } else if (number < 0) {
+                console.log("number is negative");
+            } else {
+                console.log("number is zero");
+            }
+        }
+
+        console.log(math(90));
+
+        // ================ autocall function ================4
+
+        //  11.==========
+
+        (
+            function () {
+                console.log("How are you ?")
+            }
+        )();
+
+        // 12.=========
+
+        (
+            function () {
+                let a = 20;
+                let b = 25;
+
+                console.log(a / b);
+            }
+        )();
+
+        // 13.==========
+
+        (
+            function () {
+                let my_name = "Riya";
+                let my_age = 18;
+                let mo_no = 9864662157;
+
+                console.log("My Info :-  " + "My Name : " + my_name + "\n", "My Age : " + my_age + "\n", "Contact No : " + mo_no);
+            }
+
+        )();
+
+        //  14.=========
+
+        (
+            function () {
+                let a = "javascript";
+                let b;
+                let c = 123657564;
+                let d = true;
+
+                console.log(typeof (a));
+                console.log(typeof (b));
+                console.log(typeof (c));
+                console.log(typeof (d));
+            }
+        )();
+
+        //  15.========
+
+        (
+            function () {
+                let a = 205;
+                let b = 3.14 * a * a;
+                let ans = b;
+
+                console.log("Area of circle :- " + ans);
+
+            }
+        )();
+
+        //     16.==========
+
+        (
+            function () {
+                var a = 15;
+
+                if (a >= 18) {
+                    console.log("You are eligeble for voting")
+                }
+                else {
+                    console.log("You are not eligable for voting")
+                }
+            }
+        )();
+
+        //    17.========
+
+        (
+            function () {
+                let a = 56, b = 34, c = 45, d = 10, e = 100;
+                let ans = a + b - c * d / e;
+
+                console.log(ans);
+            }
+        )();
+
+        // 18.=========
+
+        (
+            function () {
+                let a = 7895;
+                let b = 5641;
+                let ans = a - b;
+
+                console.log("a = " + a, "b = " + b, "\na-b = " + ans);
+            }
+        )();
+
+        //  19.=========
+
+        (function () {
+            let x = "Hello!!";
+
+            console.log(x);
+
+        })();
+
+        // 20.==========
+
+        (
+            function(){
+                let a = 4556;
+                let b = "string"
+
+                console.log(a+b);
+            }
+        )();
+
+
+    </script>
+</body>
+
+</html>
