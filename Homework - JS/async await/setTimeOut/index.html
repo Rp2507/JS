@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+</body>
+
+<script>
+
+    // 1.========
+
+    function waitForR() {
+        return new Promise((resolve) => {
+            setTimeout(() => {
+                resolve('resolve')
+            }, 2000);
+        })
+    }
+
+    async function getData() {
+        console.log('calling......');
+        var result = await waitForR();
+        console.log(result, 'result');
+    }
+
+    getData();
+
+    // 2.=======
+
+    function resolveAfter2Sec() {
+
+        return new Promise((resolve) => {
+            setTimeout(() => {
+                resolve('slow')
+                console.log("slow promise is done!")
+            }, 2000);
+        })
+    }
+
+    async function data() {
+        console.log("starting promise");
+        var res = await resolveAfter2Sec();
+        console.log(res);
+    }
+
+    data();
+
+
+
+    // 3.=======
+
+    function getPassword() {
+        return new Promise(
+            (resolve) => {
+                setTimeout(
+                    () => {
+                        resolve("Password")
+                    }, 3000
+                )
+            }
+        )
+    }
+
+    async function getUsername() {
+        console.log("Username");
+        var res = await getPassword();
+        console.log(res);
+    }
+
+    getUsername();
+
+    // 4.=========
+
+    function getMovie(){
+        return new Promise((resolve) => {
+            setTimeout(() =>
+            {
+                resolve("Movie Name")
+            },3000)
+        })
+    }
+
+    async function createMovie(){
+        console.log("Movie Index");
+        var final_res = await getMovie();
+        console.log(final_res);
+    }
+
+    createMovie();
+
+    // 5.=======
+
+    function getOtp(){
+        return new Promise((resolve) => {
+            setTimeout(() => {
+                resolve("======= ooops you enter invalid otp!! ========")
+            },3000)
+        })
+    }
+
+    async function enterOtp(){
+        console.log("Enter OTP.....");
+        var result = await getOtp();
+        console.log(result);
+    }
+
+    enterOtp();
+
+    // 6.========
+
+    function loginPass(){
+        return new Promise((resolve) => {
+            setTimeout(() => {
+                resolve ("Login Succesfully....")
+            },3000)
+        })
+    }
+
+    async function enterPass(){
+        console.log("Enter Valid Password!!");
+        var result =  await loginPass();
+        console.log(result);
+    }
+
+    enterPass();
+
+
+    // 7.=========
+
+    function premiumDetails(){
+        return new Promise((resolve) => {
+            setTimeout(() => {
+                resolve("Premium Details :- 6 Month 2000$ , 1 Year 3000$ ")
+            },3000)
+        })
+    }
+
+    async function getPremium(){
+        console.log("Show Premium Details....");
+        var data = await premiumDetails()
+        console.log(data); 
+    }
+
+    getPremium();
+
+    // 8.=========
+
+    function showData(){
+        return new Promise((resolve) => {
+            setTimeout(() => {
+                resolve("HELLO JAVASCRIPT!!")
+            },3000)
+        })
+    }
+
+    async function getdata() {
+        console.log("show data");
+        var data = await showData();
+        console.log(data);
+    }
+
+    getdata();
+
+    // 9.=========
+
+    function selection(){
+        return new Promise((resolve) => {
+            setTimeout(() => {
+                resolve("+,-,*,/,%")
+            },3000)
+        } )
+    }
+
+    async function getSelection(){
+        console.log("Choose what do you want...");
+        var result = await selection();
+        console.log(result);
+    }
+
+    getSelection();4
+
+    // 10.=======
+
+    function waitFun(){
+        return new Promise((resolve) => {
+            setTimeout(() => {
+                resolve("await")
+            },3000)
+        })
+    }
+
+    async function forGet(){
+        console.log("async");
+        var ress = await waitFun();
+        console.log(ress);
+    }
+
+    forGet();
+
+
+</script>
+
+</html>
