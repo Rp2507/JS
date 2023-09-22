@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <p>A Counter:</p>
+
+    <button type="button" onclick="clickCounter()">Count</button>
+
+    <p id="demo">0</p>
+
+</body>
+
+<script>
+
+    function clickCounter() {
+        if (localStorage.clickcount) {
+            localStorage.clickcount = Number(localStorage.clickcount) + 1;
+        } else {
+            localStorage.clickcount = 1;
+        }
+        document.getElementById("demo").innerHTML = localStorage.clickcount;
+    }
+
+    clickCounter();
+
+    // ===================================================
+
+    let info = {
+        user: "riya parmar",
+        age: 19,
+        mo_no: 6656121454
+    };
+    let details = {
+        name: "record",
+        age: "235",
+        phone: 78,
+    };
+    let products = {
+        name: "product",
+        age: "230",
+        phone: 223742,
+    };
+
+
+    localStorage.setItem("record", JSON.stringify(details));
+    localStorage.setItem("product", JSON.stringify(products));
+
+    let userData = localStorage.getItem("record");
+
+    console.log(userData);
+
+    // ===============================================================
+
+
+    //  session storage 
+
+    let data = {
+        user: "riya parmar",
+        age: 19,
+        mo_no: 6656121454
+    };
+    let record = {
+        name: "record",
+        age: "235",
+        phone: 78,
+    };
+    let product = {
+        name: "product",
+        age: "230",
+        phone: 223742,
+    };
+    sessionStorage.setItem('test', JSON.stringify("data"));
+
+    let getData = JSON.parse(sessionStorage.getItem('test'))
+        console.log(getData || 'opps data not found');
+
+</script>
+
+</html>
