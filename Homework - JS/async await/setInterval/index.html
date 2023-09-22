@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+</body>
+
+<script>
+
+    // 1.=======
+
+    function waitForR() {
+        return new Promise((resolve) => {
+            setInterval(() => {
+                resolve('resolve')
+            }, 3000);
+        })
+    }
+
+    async function getData() {
+        console.log('calling.......');
+        const result = await waitForR()
+        console.log(result, 'result');
+    }
+
+    setInterval(() => {
+        getData()
+    }, 3000);
+
+    // 2.=======
+
+    function resolveAfter2Sec() {
+
+        return new Promise((resolve) => {
+            setInterval(() => {
+                resolve('slow')
+            }, 3000);
+        })
+    }
+
+    async function myData() {
+        console.log("starting promise");
+        var res = await resolveAfter2Sec();
+        console.log(res);
+    }
+
+    setInterval(() => {
+        myData();
+    }, 3000);
+
+    // 3.========
+
+    function getPassword() {
+        return new Promise(
+            (resolve) => {
+                setInterval(
+                    () => {
+                        resolve("Password")
+                    }, 3000
+                )
+            }
+        )
+    }
+
+    async function getUsername() {
+        console.log("Username");
+        var res = await getPassword();
+        console.log(res);
+    }
+
+    setInterval(() => {
+        getUsername();
+    }, 3000);
+
+    // 4.========
+
+    function data() {
+        return new Promise((resolve) => {
+            setInterval(() => {
+                resolve('JAvascript')
+            }, 3000);
+        })
+    }
+
+    async function getdata() {
+        console.log('HEllo.......');
+        const result = await data()
+        console.log(result);
+    }
+
+    setInterval(() => {
+        getdata();
+    }, 3000);
+
+    // 5.=======
+
+    function myfun() {
+        return new Promise((resolve) => {
+            setInterval(() => {
+                resolve('World!!')
+            }, 3000);
+        })
+    }
+
+    async function getData() {
+        console.log('HEllo...');
+        const result = await myfun()
+        console.log(result);
+    }
+
+    setInterval(() => {
+        getData();
+    }, 3000);
+
+    // 6.=======
+
+    function myFunction() {
+        return new Promise((resolve) => {
+            setInterval(() => {
+                resolve("Congratulations")
+            }, 3000)
+        })
+    }
+
+    async function getFunction() {
+        var ans = await myFunction();
+        console.log(ans);
+    }
+
+    setInterval(() => {
+        getFunction()
+    }, 3000);
+
+    // 7.=======
+
+    function loginPass() {
+        return new Promise((resolve) => {
+            setInterval(() => {
+                resolve("Login Succesfully....")
+            }, 3000)
+        })
+    }
+
+    async function enterPass() {
+        console.log("Enter Valid Password!!");
+        var result = await loginPass();
+        console.log(result);
+    }
+
+    setInterval(() => {
+        enterPass();
+    }, 3000);
+
+    // 8.=======
+
+    function waitFun() {
+        return new Promise((resolve) => {
+            setInterval(() => {
+                resolve("await")
+            }, 3000)
+        })
+    }
+
+    async function forGet() {
+        console.log("async");
+        var ress = await waitFun();
+        console.log(ress);
+    }
+
+    setInterval(() => {
+        forGet();
+    }, 3000);
+
+    // 9.=======
+
+
+    function getMovie() {
+        return new Promise((resolve) => {
+            setInterval(() => {
+                resolve("Movie Name")
+            }, 3000)
+        })
+    }
+
+    async function createMovie() {
+        console.log("Movie Index");
+        var final_res = await getMovie();
+        console.log(final_res);
+    }
+
+    setInterval(() => {
+        createMovie();
+    }, 3000);
+
+    // 10.========
+
+    function alert() {
+        return new Promise((resolve) => {
+            setInterval(() => {
+                resolve('============ wait!! Somethig want wrong ==========')
+            }, 3000)
+        })
+    }
+
+    async function getAlert() {
+        var result = await alert();
+        console.log(result);
+    }
+
+    setInterval(() => {
+        getAlert();
+    }, 3000);
+
+
+</script>
+
+</html>
