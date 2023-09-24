@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+</body>
+
+<script>
+
+    // 1.==========
+    for (let index = 1; index < 7; index++) {
+
+        if (index) {
+            console.log(index, 'First check here');
+        }
+        else {
+            console.log('Now else check');
+        }
+    }
+
+    // 2.========
+
+    for (let index = 0; index <= 8; index++) {
+        if (index) {
+            console.log(index);
+        }
+        else {
+            console.log('========== ERROR ===========');
+        }
+    }
+
+    // 3.=========
+
+    var fruits = ["Banan", "Apple", "Mango", "dreganfruit", "graps"]
+    var text = " ";
+
+    for (index = 1; index <= fruits.length; index++) {
+        if (index) {
+            text += fruits[index] + " ";
+        }
+        else {
+            console.log("Condition is false");
+        }
+    }
+    console.log(text);
+
+    // 4.=========
+
+    var languages = ["HTML", "CSS", "Javascript", "C", "C++"]
+
+    for (var index = 1; index <= languages.length; index++) {
+        if (index) {
+            console.log("This language use to web development", index);
+        }
+        else {
+            console.log("wrong condition!");
+        }
+    }
+
+
+    // 5.========
+
+    var array = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+
+    for (let index = 2; index < 10; index++) {
+        if (index < array.length) {
+            console.log("index :- ", index);
+        }
+        else {
+            console.log("Condition False");
+        }
+    }
+
+    // 6.========
+
+    for (var index = 1; index <= 10; index++) {
+        if (index) {
+            console.log("This's Index ", index);
+        }
+        else {
+            console.log("NOt a Index");
+        }
+    }
+
+    // 7.========
+
+    var x;
+
+    for (x = 1; x <= 5; x++) {
+        if (x) {
+            console.log("Value of x : ", x);
+        } else {
+            console.log("===============");
+        }
+    }
+
+    // 8.========
+
+    var subjects = ["maths", "science", "economics", "english"]
+    var data = " "
+
+    for (var index = 1; index <= subjects.length; index++) {
+        if (index) {
+            data += subjects[index] + " ";
+        }
+        else {
+            console.log("wrong condition!");
+        }
+    }
+    console.log(data);
+
+    // 9.=========
+
+    var a;
+
+    for (a = 2; a <= 5; a++) {
+        if (a) {
+            console.log("Value of a : ", a);
+        } else {
+            console.log("===============");
+        }
+    }
+
+    // 10.========
+
+    for (var index = 19; index < 22; index++) {
+        if (index) {
+            console.log(index);
+        } else {
+            console.log("oops ERROR");
+        }
+    }
+
+</script>
+
+</html>

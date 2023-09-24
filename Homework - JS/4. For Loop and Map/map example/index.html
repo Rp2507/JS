@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+</body>
+
+<script>
+
+    // ========== Map Examples ===========
+
+    // 1.==========
+    var data = [
+        {
+            name: "riya parmar",
+            age: 19,
+            contact: 5689534644,
+        },
+        {
+            name: "sakshi patel",
+            age: 23,
+            contact: 532645431,
+        },
+        {
+            name: "neha mahera",
+            age: 25,
+            contact: 5498784444,
+        },
+    ]
+
+    function getData(data) {
+        var userFulldata = data.map(d => d.name)
+        return userFulldata
+    }
+
+    var userAllrecords = getData(data);
+    console.log(userAllrecords, 'userAllrecords');
+
+    // 2.============
+
+    var userRecords = [
+        {
+            name: "riya parmar",
+            age: 19,
+            contact: 5689534644,
+        },
+        {
+            name: "sakshi patel",
+            age: 23,
+            contact: 532645431,
+        },
+        {
+            name: "neha mahera",
+            age: 25,
+            contact: 5498784444,
+        },
+        {
+            name: "nidhi joshi",
+            age: 30,
+            contact: 9946596445,
+        },
+    ]
+
+    function getUserdata(userRecords) {
+        var userData = userRecords.map(x => x.contact)
+        return userData
+    }
+
+    var userAlldata = getUserdata(userRecords);
+    console.log('user contact ', userAlldata);
+
+    // 3.===========
+
+    const user = ["Ram", "mohan", "ramesh", "suresh", "rakesh"];
+
+    const result = user.map((data) => data);
+   console.log(result);
+
+    // 4.===========
+
+    let courses = ["Web-Development", "Web-Designing", "Full-Stack Development", "Artificial Intaligance"];
+
+    let select = courses.map((cousreName) => cousreName)
+    console.log(select)
+
+
+    // 5.=========
+
+    let numbers = [2,5,6,9,56,84,100]
+    
+    let ans = numbers.map((num) => num)
+    console.log(ans)
+
+    // 6.=========
+    
+    let users = [
+        {
+            firstName: "Karan",
+            lastName: "Mahera"
+        },
+        {
+            firstName: "Kartik",
+            lastName: "Patel"
+        },
+        {
+            firstName: "Divya",
+            lastName: "Sharma"
+        }
+    ];
+    
+    let userFullnames = users.map(function (element) {
+        return `${element.firstName} ${element.lastName}`;
+    })
+    console.log(userFullnames);
+
+    // 7.==========
+
+    let num = [20,25,11,9,34,5]
+
+    function myFun(n){
+        return n * 2
+    }
+
+    let newArray = num.map(myFun);
+    console.log(newArray);
+
+    // 8.========
+
+    let add = [2,34,6,78,25,60,11]
+    
+    let newArr = add.map((a) => a+5);
+    console.log(newArr);
+    
+    // 9.=========
+
+    let digit = [2,10,15,45,89]
+
+    let squre = digit.map((Numbers) => Numbers*Numbers);
+    console.log(squre);
+    
+    // 10.==========
+    
+        var empDetails = [
+            {
+                name: "riya parmar",
+                salary : 350000,
+                contact: 5689534644,
+            },
+            {
+                name: "sakshi patel",
+                salary : 20000,
+                contact: 532645431,
+            },
+            {
+                name: "neha mahera",
+                salary : 8000,
+                contact: 5498784444,
+            },
+        ]
+    
+        function getempDetails(empDetails) {
+            var empFulldata = empDetails.map(detail => detail.salary)
+            return empFulldata
+        }
+    
+        var empAlldetails = getempDetails(empDetails);
+        console.log(empAlldetails);
+    
+</script>
+
+</html>
