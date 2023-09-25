@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+</body>
+
+<script>
+
+    // ============= Scope Examples ================
+
+    // Global Scope
+
+    // 1.=============
+
+    var carName = "Roles_Royal";
+
+    function myFun() {
+        console.log("The BEst Car ", carName);
+    }
+
+    myFun();
+
+    // 2.============
+
+    let name = "Riya_Parmar";
+
+    function myName() {
+        console.log("My Name IS : ", name);
+    }
+
+    console.log(name);
+    myName();
+
+    // 3.==========
+
+    let a = 56, b = 25, x = a * b;
+
+    console.log(x);
+
+
+    //  Function Scope
+
+    // 4.============
+
+    function myFunction() {
+        var localvar = 25;
+        console.log(localvar);
+    }
+
+    myFunction();
+    // console.log("========ERROR======== In Function scope we can't access the veriable out side the Function",localvar);
+
+
+    // 5.===========
+
+    function myCar() {
+        let carname = "Volvo";
+
+        console.log("My Car Name Is ", carname);
+    }
+
+    myCar();
+    // console.log("Error : local var is not define",carname);
+
+    // 6.===========
+
+    function myfun() {
+        let type = "Full-Stack Developer"
+        console.log(typeof type);
+    }
+
+    myfun();
+    console.log(typeof type);
+
+
+    //  Block Scope 
+
+    // 7.===========
+
+    if (true) {
+        let blockvar = 20;
+        console.log(blockvar);
+    }
+
+
+    // console.log(blockvar, "======= ERRO ========Block var is note define");
+
+    // 8.==========
+
+    var z = 1;
+    let y = 1;
+
+    if (true) {
+        let z = 2;
+        let y = 2;
+        console.log(z);
+        console.log(y);
+    }
+
+    console.log(z);
+
+    console.log(y);
+
+    // 9.=========
+
+    function blockScope() {
+        if (true) {
+            var fruit1 = 'apple';        //exist in function scope
+            const fruit2 = 'banana';     //exist in block scope
+            let fruit3 = 'strawberry';   //exist in block scope
+
+            console.log(fruit2);  // in block it's access
+            console.log(fruit3);
+        }
+        console.log(fruit1);
+        console.log(fruit2);  // Not Access error: is not define
+        console.log(fruit3);  // Not Access error : is not define
+    }
+
+    blockScope();
+
+    // 10.========
+
+    if (true) {
+        let name = "sneha sharma";
+        console.log(name);
+    }
+
+    // console.log(name, "======= ERRO ========Block var is note define");
+</script>
+
+</html>
