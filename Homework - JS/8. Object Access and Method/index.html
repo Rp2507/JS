@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8"/>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+	<title>Object</title>
+</head>
+<body>
+</body>
+<script>
+
+	const person = {firstName:"John", lastName:"Doe", age:30, eyeColor:""};
+	console.log(person.firstName , 'firstName')
+	console.log(person.lastName , 'lastName')
+	console.log(person.age , 'age')
+	console.log(person.eyeColor ?? 'Not Added' , 'Eye Color');
+
+    let fatherDetail = [
+        {firstName:"Manish" , lastName:"PAtel"  , age:50 , eyeColor:"Blue"}
+    ]
+	
+	let details = fatherDetail[0].eyeColor;
+	console.log(details);
+</script>
