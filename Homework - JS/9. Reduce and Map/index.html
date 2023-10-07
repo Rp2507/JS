@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+</body>
+<script>
+
+    // 1.====
+    const numbers = [1, 2, 3, 4, 5];
+
+    const result = numbers
+        .map(num => num * 2)
+        .reduce((acc, num) => acc + num, 0);
+
+    console.log(result);
+
+
+    // 2.======
+
+    var arr = [10, 20, 30, 40, 50, 60, 70, 80];
+
+    let output = arr
+        .map(x => x * 1)
+        .reduce((total, x) => total + x, 0);
+
+    console.log(output, 'output');
+
+    // 3.========
+
+    var array1 = [10, 20, 30, 40, 50];
+
+    let res = array1
+        .map(array1 => array1 % 2 === 0)
+        .reduce((a, b) => a + b, 0)
+
+    console.log(res, 'res');
+
+    // 4.=====
+
+    var array2 = [2, 4, 6, 9, 10];
+
+    let result1 = array2
+        .map(number => number / 2)
+        .reduce((accu, number) => accu - number, 0);
+
+    console.log(result1, 'result');
+
+    // 5.=====
+
+    var crn = [23, 45, 65, 50, 38];
+
+    let acc = crn
+        .map(crn => crn * 2)
+        .reduce((accumulator, crn) => accumulator - crn, 2);
+
+    console.log(acc, 'result');
+
+    // 6.=====
+
+    [0, 1, 2, 3, 4].reduce(function (previousValue, currentValue) {
+        console.log(previousValue + currentValue);
+        return previousValue + currentValue;
+    });
+
+    // 7.======
+
+    var number = [23, 54, 67, 89, 46];
+
+    number.reduce(getsum, 0);
+
+    function getsum(total, num) {
+        console.log(total + num, 'getsum');
+        return total + num
+    }
+
+    // 8.======
+
+    var reduce= [1, 2, 3, 4, 5];
+
+    var ans = reduce
+        .filter(num => num % 2 === 0)  
+        .map(num => num * 2)           
+        .reduce((acc, num) => acc + num, 0); 
+
+    console.log(ans , 'Answer'); 
+    
+    // 9.======
+    
+    var arr = [
+        { name: "Riya Parmar", quantity: 1, price: 20 },
+        { name: "Nidhi Joshi", quantity: 2, price: 40 },
+        { name: "Sakshi Patel", quantity: 3, price: 60 },
+        { name: "Daksha Pandya", quantity: 4, price: 80 }
+    ];
+    
+    var test = arr.reduce(function (acc, curr) {
+        console.log(acc + (curr.quantity * curr.price));
+        return acc + (curr.quantity * curr.price);
+    }, 0);
+    
+    console.log(test);
+    
+    // 10.=====
+    
+    var records = [
+        { value: 24, gender: "BOYS" },
+        { value: 42, gender: "BOYS" },
+        { value: 85, gender: "GIRLS" },
+        { value: 12, gender: "GIRLS" },
+        { value: 10, gender: "BOYS" }];
+
+    function myFun()
+    {
+        return records.reduce(function (sum, record) {
+            if (records.gender == 'GIRLS') return sum + records.value
+            else return sum;
+        }, 0)
+    }
+    console.log(myFun(),'Final Result');
+
+</script>
+
+</html>
