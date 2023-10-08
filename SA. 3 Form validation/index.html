@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User Register Form</title>
+</head>
+
+<style>
+    h1{
+        text-align: center;
+        color: rgb(62, 62, 86);;
+    }
+
+    form,
+    .getdata {
+        border: 2px solid blue;
+        border-radius: 5px;
+        box-shadow: inset;
+        width: 800px;
+        margin-left: 355px;
+    }
+
+    .form,
+    .getdata {
+        padding: 20px;
+        color: rgb(228, 228, 228);
+        background-color: rgb(62, 62, 86);
+        font-size: 17px;
+    }
+
+    button {
+        box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px, rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
+        ;
+        border: 3px solid rgb(159, 152, 152);
+        border-radius: 5px;
+    }
+</style>
+
+<body>
+
+    <h1>User Register Form</h1>
+    <hr />
+    <hr /><br />
+    <form>
+        <div class="form">
+            <label> Fullname :</label>
+            <input id="fname" type="text" name="firstname" /> <br> <br>
+
+            <label> Age : </label>
+            <input id="age" type="number" name="Age" /> <br> <br>
+
+            <label> JOb : </label>
+            <input id="job" type="text" name="JOb" /> <br> <br>
+
+            <label>Phone :</label>
+            <!-- <input type="text" name="country code" value="+91" size="2" /> -->
+            <input id="phone" type="text" name="phone" size="10" /> <br><br>
+
+            <label>Email :</label>
+            <input id="email" type="email" id="email" name="email" /><br><br>
+
+            <label>Country :</label>
+            <select id="country">
+                <option value="Country">Country</option>
+                <option value="India">India</option>
+                <option value="USA">USA</option>
+                <option value="Africa">Africa</option>
+                <option value="South Africa">South Africa</option>
+                <option value="London">London</option>
+                <option value="Afghanistan">Afghanistan</option>
+            </select><br><br>
+
+            <label id="gender">Gender :</label>
+            <input type="radio" name="male" /> Male
+            <input type="radio" name="female" /> Female
+            <input type="radio" name="other" /> Other<br><br>
+
+            <label>Address :</label>
+            <textarea id="address" cols="80" rows="5" value="address"
+                placeholder="Enter Your Address"></textarea><br><br>
+
+            <button type="submit" onclick="submitForm()">Please Submit Form</button>
+            <p id="error" style="color: red;"></p>
+        </div>
+    </form>
+    <hr />
+    <hr />
+    <div class="getdata">
+        <h3>User Information</h3>
+        <button onclick="getUserInfo()">Get User Data</button>
+        <p id="test_name"></p>
+        <p id="test_age"></p>
+        <p id="test_job"></p>
+        <p id="test_country"></p>
+        <p id="test_address"></p>
+    </div>
+
+
+</body>
+
+<script>
+
+    function submitForm() {
+        let fname = document.getElementById('fname').value
+        let age = document.getElementById('age').value
+        let job = document.getElementById('job').value
+        let phone = document.getElementById('phone').value
+        let email = document.getElementById('email').value
+        let country = document.getElementById('country').value
+        let gender = document.getElementById('gender').value
+        let address = document.getElementById('address').value
+        try {
+            if (fname && age && job && phone && email && address) {
+                alert('====== Form Submitted Succesfully ====== !!')
+                document.getElementById('error').innerHTML = ''
+                let userData = {
+                    userName: name,
+                    age,
+                    job,
+                    phone,
+                    email,
+                    address
+                }
+                localStorage.setItem('userInformation', JSON.stringify(userData))
+            }
+            else {
+                throw 'please fill this form'
+            }
+        }
+        catch (error) {
+            // alert('Please fill form')
+            document.getElementById('error').innerHTML = error
+        }
+    }
+
+    function getUserInfo() {
+        let userdata = JSON.parse(localStorage.getItem('userInformation'))
+        document.getElementById('test_name').innerHTML = userdata.userName ?? 'Something went to wrong'
+        document.getElementById('test_age').innerHTML = userdata.age ?? 'Something went to wrong'
+        document.getElementById('test_job').innerHTML = userdata.job ?? 'Something went to wrong'
+        document.getElementById('test_address').innerHTML = userdata.address ?? 'Something went to wrong'
+    }
+
+</script>
+
+</html>
