@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -14,39 +13,28 @@
         border-radius: 5px;
     }
 </style>
-
 <body>
-    
     <h1>Trip Cost Calculator</h1>
-
         <lable>Distance (km):</lable>
         <input type="number" id="distance" value="100" /> <br/><br/>
-
         <lable>Petrol Price (cents per litre):</lable>
         <input type="number" id="petrol" value="150" /><br/><br/>
-
         <lable>Litres per 100 km:</lable>
         <input type="number" id="litres" /><br/><br/>
-
         <lable>Trip Cost:</lable>
         <input type="number" id="cost" readonly><br/><br/>
-
-        <!-- Click On btn and Invoke function -->
+    
+        <!-- Click On btn and Invoke function (Onclick Invoke Function) -->
         <button  onclick="getTripCost()">GET TOTAL COST OF TRIP</button>
 </body>
-
 <script>
-
         // Function Initialize
     function getTripCost() {
         let distance = document.getElementById("distance").value
         let petrolPrice = document.getElementById("petrol").value
         let litres = document.getElementById("litres").value
         let tripCost = ((litres * petrolPrice) / 100) * distance
-
         document.getElementById("cost").value = tripCost / 100;
     }
-
 </script>
-
 </html>
