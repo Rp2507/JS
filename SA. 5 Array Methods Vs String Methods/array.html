@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+</body>
+<script>
+    // ======================= Array Method ======================
+
+    let sub = [1, 2, 3, 4, 5, 6, 7]
+
+    // 1.====
+    sub.length
+    console.log(sub, 'array length');
+
+    // 2.=====
+    sub.push(8, 9, 10)
+    console.log(sub, 'Push Method');
+
+    // 3.=====
+    sub.pop()
+    console.log(sub, 'Pop Method');
+
+    // 4.=====
+    sub.shift()
+    console.log(sub, 'shift method');
+
+    // 5=====
+    sub.unshift(0, 1)
+    console.log(sub, 'Unshift method');
+
+    // 6.=====
+    const user = ["Ram", "mohan", "ramesh", "suresh", "rakesh"];
+
+    const result = user.map((data) => data);
+    console.log(result);
+
+    // 7.=====
+    let array = [10, 11, 12, 13]
+    let concate = sub.concat(array)
+    console.log(concate);
+
+    // 8.=====
+    sub.slice(3, 5)
+    console.log(sub, 'Slice method');
+
+    // 9.=====
+    sub.splice(10, 0, 14, 15)
+    console.log(sub, 'splice method');
+
+    // 10.=====
+    sub.reverse()
+    console.log(sub, 'reverse method');
+
+    // 11.=====
+    sub.toString()
+    console.log(sub, 'tostring method');
+</script>
+
+</html>
