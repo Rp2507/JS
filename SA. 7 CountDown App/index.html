@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CountDown</title>
+</head>
+
+<style>
+    * {
+        padding: 0;
+        margin: 0;
+        box-sizing: border-box;
+    }
+
+    .countdown {
+        width: 100%;
+        height: 100vh;
+        background: url('img/back-image.jpg') center center;
+        background-size: cover;
+    }
+
+    .data {
+        /* margin-top: 50px; */
+        width: 100%;
+        height: 100%;
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        background-color: rgba(0, 0, 0, 0.7);
+    }
+
+    .box {
+        margin-top: 20px;
+        width: 90%;
+        display: flex;
+        justify-content: center;
+        color: white;
+    }
+
+
+    .box div {
+        /* width: 250px; */
+        text-align: center;
+    }
+
+    label {
+        font-size: 25px;
+        font-weight: 200;
+        text-shadow: 1px 2px 2px #7c8b9a;
+    }
+
+    h1,h4,
+    span {
+        margin-top: 10px;
+        color: whitesmoke;
+        text-align: center;
+        font-size: 40px;
+        text-shadow: 1px 2px 2px #c09797;
+    }
+    h4{
+        font-size: 35px;
+    }
+
+    input {
+        width: 175px;
+        background-color: rgba(255, 255, 255, 0.9);
+        border-color: transparent;
+        border-radius: 5px;
+        height: 92px;
+        text-align: center;
+        font-size: 64px;
+        text-shadow: 1px 2px 2px #c09797;
+        box-shadow: 2px 2px 7px 1px #4DA6FF;
+    }
+</style>
+
+<body>
+    <div class="countdown">
+        <div class="data">
+            <h1>ATTENTION....!!!</h1>
+            <h4>NODE JS IS START SOON</h4>
+            <span id="end-date"></span>
+
+            <div class="box">
+                <div>
+                    <input type="number" id="days" readonly value="0">
+                    <br />
+                    <label>Days</label>
+                </div>
+                <div>
+                    <input type="number" id="hours" readonly value="0">
+                    <br />
+                    <label>Hours</label>
+                </div>
+                <div>
+                    <input type="number" id="min" readonly value="0">
+                    <br />
+                    <label>Minutes</label>
+                </div>
+                <div>
+                    <input type="number" id="second" readonly value="0">
+                    <br />
+                    <label>Seconds</label>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+<script>
+    let endDate = "16 Octomber 2023 07:00 AM"
+    document.getElementById("end-date").innerText = endDate;
+
+    function startCountDown() {
+        let end = new Date(endDate);
+        let now = new Date();
+        let difference = (end - now) / 1000
+
+        if (difference < 0) {
+            return;
+        }
+
+        let days = Math.floor(difference / 3600 / 24); // convert into days;
+        document.getElementById("days").value = days
+
+        let hours = Math.floor(difference / 3600) % 24; // convert into hours;
+        document.getElementById("hours").value = hours
+
+        let minute = Math.floor(difference / 60) % 60; // convert into minutes;
+        document.getElementById("min").value = minute
+
+        let second = Math.floor(difference) % 60; // convert into seconds;
+        document.getElementById("second").value = second
+    }
+
+    // 1 day = 24 hrs
+    // 1 hr = 60 mins
+    // 60 min = 3600 sec
+
+    // startCountDown();
+
+    setInterval(() => {
+        startCountDown()
+    }, 1000);
+</script>
+
+</html>
