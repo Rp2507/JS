@@ -1,0 +1,110 @@
+ ================== HTTP response status codes ===================
+
+:=> Information Responses := 	1). 100 - Continue
+				2). 101 -  Switching protocols
+				3). 102 - Processing
+				4). 103 - Early Hints
+
+:=> Successful responses := 	5). 200 - Ok
+				6). 201 - Created
+				7). 202 - Accepted
+				8). 203 - Non-Authorative Information
+				9). 204 - No Content
+				10). 205 - Reset Content
+				11). 206 - Partial Content
+				12). 207 - Multi Status
+				13). 208 - Already Reported
+				14). 209 - IM Used
+
+:=> Redirection messages := 	15). 300 - Multiple Choice
+				16). 301 - Move Permanently
+				17). 302 - Found 
+				18). 303 - See Other
+				19). 304 - Not Moidfy
+				20). 305 - Use Proxy
+				21). 306 - Unused
+				22). 307 - Temporary Redirect
+				23). 308 - Permanant Redirect
+
+:=> Client error responses := 	24). 400 - Bad Request
+				25). 401 - Unauthorize
+				26). 402 - Payment Required
+				27). 403 - Forbided
+				28). 404 - Not Found
+				29). 405 - Method not Allowed
+				30). 406 - Not Acceptable
+				31). 407 - Proxy Authontication Required
+				32). 408 - Request Timeout
+				33). 409 - Conflict
+				34). 410 - Gone
+				35). 411 - Length Required
+				36). 412 - Precondition Failed
+				37). 413 - Payload too Large
+				38). 414 - URI too Long
+				39). 415 - Unspported Media Type
+				40). 416 - Range Not Satisfied
+				41). 417 - Exaptation Failed 
+				42). 418 - I'm a Teapod
+				43). 421 - Missdirected Request
+				44). 422 - Unprocesseble Content
+				45). 423 - Locked
+				46). 424 - Failed Dependancy
+				47). 425 - Too Early
+				48). 426 - Upgrade Required
+				49). 428 - Precondition Required
+				50). 429 - Too Many Request
+				51). 431 - Request HEader Fields Too Large
+				52). 451 - Unavailable For Legal Reasons
+
+:=> Server error responses := 	53). 500 - Internal Server Error
+				54). 501 - Not Implemented
+				55). 502 - Bad Gateway
+				56). 503 - Service Unavailable
+				57). 504 - Gateway Timeout
+				58). 505 - HTTP Version Not Supported
+				59). 506 - Variant Also Negotiates
+				60). 507 - Insufficient Storage (WebDAV)
+				61). 508 - Loop Detected (WebDAV)
+				62). 510 - Not Extended
+				63). 511 - Network Authentication Required
+
+
+==================== RESERVE KEYWORD =====================
+
+- await			- if			- protected
+- break			- import		- interface
+- case			- in			- synchronized
+- catch			- instanceof		- short
+- class			- new			- static
+- const			- null			- implements
+- continue		- return		- transient
+- debugger		- super
+- default		- switch
+- delete		- this
+- do			- throw
+- else			- true
+- enum			- try
+- export		- typeof
+- extends		- var
+- false			- void
+- finally		- while
+- for			- with
+- function		- yield
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
