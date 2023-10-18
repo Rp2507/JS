@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Event Cost Management</title>
+</head>
+<style>
+    .box {
+        border: 1px solid whitesmoke;
+        border-radius: 10px;
+        box-shadow: rgba(0, 0, 0, 0.17) 0px -23px 25px 0px inset, rgba(0, 0, 0, 0.15) 0px -36px 30px 0px inset, rgba(0, 0, 0, 0.1) 0px -79px 40px 0px inset, rgba(0, 0, 0, 0.06) 0px 2px 1px, rgba(0, 0, 0, 0.09) 0px 4px 2px, rgba(0, 0, 0, 0.09) 0px 8px 4px, rgba(0, 0, 0, 0.09) 0px 16px 8px, rgba(0, 0, 0, 0.09) 0px 32px 16px;
+        text-align: center;
+        padding: 15px;
+        width: 500px;
+        margin: 50px auto;
+    }
+
+    button {
+        box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px, rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
+        border: 3px solid rgb(159, 152, 152);
+        border-radius: 5px;
+        padding: 10px;
+        font-size: 18px;
+        font-weight: 700;
+    }
+
+    label {
+        font-size: 18px;
+        font-weight: 500;
+    }
+
+    input,
+    select {
+        box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
+        border: 1px solid gray;
+        border-radius: 5px;
+        margin-left: 7px;
+        width: 200px;
+    }
+</style>
+<body>
+    <div class="box">
+        <h1>Event Cost Management</h1>
+        <label>Select Event Name:</label>
+        <select>
+            <option value="">Event Name : </option>
+            <option value="Award">Award Function</option>
+            <option value="Birthday">Birthday Celebration</option>
+            <option value="Engagment">Engagment</option>
+            <option value="Wedding">Wedding</option>
+            <option value="Reseption">Reseption</option>
+            <option value="Meetup">Business Meetup</option>
+        </select><br /><br />
+        <label>Enter Members Number:</label>
+        <input type="number" id="memberNumber" /><br /><br />
+        <label>Dish Price:</label>
+        <input type="number" id="dishPrice" /><br /><br />
+        <label>Discount ( 10 % ):</label>
+        <input type="number" id="discount" /><br /><br />
+        <label>Advanced:</label>
+        <input type="number" id="advanced" /><br /><br />
+        <label>Event Cost:</label>
+        <input type="number" id="cost" readonly><br /><br />
+        <!-- Click On btn and Invoke function (Onclick Invoke Function) -->
+        <button onclick="getEventCost()">GET TOTAL COST OF EVENT</button>
+    </div>
+</body>
+<script>
+    function getEventCost() {
+        let memberNumber = document.getElementById('memberNumber').value
+        let dishPrice = document.getElementById('dishPrice').value
+        let discount = document.getElementById('discount').value
+        let advanced = document.getElementById('advanced').value
+        let price = memberNumber * dishPrice
+        let dis = (price * discount) / 100
+        let totalCost = price - dis - advanced;
+        // console.log(totalCost);
+        // document.getElementById('cost').value = totalCost;
+        try {
+            if (memberNumber && dishPrice && discount && advanced) {
+                let price = memberNumber * dishPrice
+                let dis = (price * discount) / 100
+                let totalCost = price - dis - advanced;
+                // console.log(totalCost);
+                document.getElementById('cost').value = totalCost;
+            }
+            else {
+                throw 'Please Fill The Details'
+            }
+        }
+        catch {
+            alert('Please Fill Details')
+        }
+    }
+</script>
+
+</html>

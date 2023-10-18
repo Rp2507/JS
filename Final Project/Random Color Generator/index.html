@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Color Generator</title>
+</head>
+<style>
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+    .main {
+        width: 100%;
+        height: 100vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .container {
+        width: 30rem;
+        padding: 50px;
+        border-radius: 10px;
+        font-size: 25px;
+        color: rgb(44, 31, 31);
+        background-color: rgb(208, 188, 188);
+        text-align: center;
+        box-shadow: rgba(125, 19, 36, 0.4) 5px 5px, rgba(207, 7, 40, 0.3) 10px 10px, rgba(105, 4, 17, 0.2) 15px 15px, rgba(121, 16, 16, 0.1) 20px 20px, rgba(155, 28, 36, 0.05) 25px 25px;
+    }
+    button {
+        width: 100%;
+        background-color: rgb(88, 16, 16);
+        color: rgb(255, 255, 255);
+        border: none;
+        border-radius: 5px;
+        display: block;
+        margin-top: 20px;
+        font-size: 20px;
+        padding: 10px;
+        box-shadow: rgba(3, 102, 214, 0.3) 0px 0px 0px 3px;
+    }
+</style>
+<body>
+    <div class="main">
+        <div class="container" id="auto-change">
+            <h2 id="color-code">#fff</h2>
+            <button id="btn">Click Me</button>
+        </div>
+    </div>
+</body>
+<script>
+    const getColor = () => {
+        const randomNumber = Math.floor(Math.random() * 1677215) //multiply this number because we need hexadesimal code
+        console.log(randomNumber,'rendome');
+        const randomCode = '#' + randomNumber.toString(16); // 16 is stands for hexadecimal code , it's hexadecimal unit
+        console.log(randomNumber,randomCode);
+        document.body.style.backgroundColor = randomCode;
+        document.getElementById("color-code").innerHTML = randomCode; 
+    }
+    // APPLY CLICK EVENT ON BUTTON & invoke getcolor function
+    document.getElementById('btn'), addEventListener('click', getColor)
+    getColor();
+
+    // for auto change color
+    const autoChange = () => {
+        const randomNumber = Math.floor(Math.random() * 1677215)
+        const randomCode = '#' + randomNumber.toString(16);
+        let autoChange = document.getElementById('auto-change')
+        autoChange.style.backgroundColor = randomCode
+    }
+    setInterval(() => {
+        autoChange()
+    }, 500);
+
+</script>
+
+</html>

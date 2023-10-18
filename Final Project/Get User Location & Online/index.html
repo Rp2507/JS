@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User Location & User Online or Not</title>
+</head>
+<style>
+    button {
+        box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px, rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
+        border: 3px solid rgb(159, 152, 152);
+        border-radius: 5px;
+        font-size: 18px;
+        font-weight: 700;
+    }
+
+    span {
+        width: 20px;
+        height: 20px;
+        padding: 10px;
+        border: 2px solide white;
+        border-radius: 50%;
+    }
+
+    .box {
+        border: 1px solid whitesmoke;
+        border-radius: 10px;
+        box-shadow: rgba(0, 0, 0, 0.17) 0px -23px 25px 0px inset, rgba(0, 0, 0, 0.15) 0px -36px 30px 0px inset, rgba(0, 0, 0, 0.1) 0px -79px 40px 0px inset, rgba(0, 0, 0, 0.06) 0px 2px 1px, rgba(0, 0, 0, 0.09) 0px 4px 2px, rgba(0, 0, 0, 0.09) 0px 8px 4px, rgba(0, 0, 0, 0.09) 0px 16px 8px, rgba(0, 0, 0, 0.09) 0px 32px 16px;
+        text-align: center;
+        padding: 15px;
+        width: 500px;
+        margin: 50px auto;
+    }
+</style>
+
+<body>
+    <div class="box">
+        <h1>User Location</h1>
+        <h3>Latitude :- <span id="getLetitude"></span></h3>
+        <h3>Longitude :- <span id="getLongitude"></span></h3>
+        <button onclick="getUserLocation()">Get User Location</button>
+
+        <h2>User Online or Not</h2>
+        <span id="userInfo"></span>
+    </div>
+</body>
+<script>
+    function getUserLocation() {
+        let latitude = document.getElementById('getLetitude')
+        let longitude = document.getElementById('getLongitude')
+        if (window.navigator) {
+            navigator.geolocation.getCurrentPosition(showUserPosition);
+        } else {
+            document.write("Geolocation is not supported by this browser.");
+        }
+    }
+
+    function showUserPosition(position) {
+        let getUserLatitude = position.coords.latitude;
+        let getUserLongitude = position.coords.longitude;
+        getLetitude.innerHTML = getUserLatitude;
+        getLongitude.innerHTML = getUserLongitude;
+    }
+    // ==============================================================
+    //User Online Or Offline
+    let userInfo = document.getElementById('userInfo')
+    if (window.navigator.onLine) {
+        userInfo.style.backgroundColor = 'green';
+        userInfo.innerHTML = 'Online'
+    }
+    else {
+        userInfo.style.backgroundColor = 'red';
+        userInfo.innerHTML = 'Offline'
+    }
+</script>
+
+</html>
