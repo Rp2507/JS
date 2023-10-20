@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Random Color Generate </title>
+</head>
+<body id="auto-change">
+</body>
+<script>
+    const autoChange = () => {
+        const codeNum = Math.floor(Math.random() * 1677215)
+        const colorCode = '#' + codeNum.toString(16);
+        let autoChange = document.getElementById('auto-change')
+        autoChange.style.backgroundColor = colorCode
+    }
+    setInterval(() => {
+        autoChange()
+    }, 500);
+
+</script>
+</html>
